@@ -7,11 +7,24 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      colors: {},
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#65a744",
+          secondary: "#f6d860",
+          accent: "#37cdbe",
+          neutral: "#3d4451",
+          "base-100": "#ffffff",
+          "base-200": "#f9fafb",
+          "base-300": "#f4f5f7",
+        },
+      },
+    ],
+  },
 };
