@@ -43,12 +43,12 @@ export default function Home() {
       }}
     >
       <div className="absolute w-full h-full bg-[rgba(255,255,255,0.95)]"></div>
-      <div className="container w-[50%] mx-auto h-screen flex flex-col z-[100] ">
+      <div className="container lg:w-[50%] w-full px-5 lg:px-0 mx-auto h-screen flex flex-col z-[100] ">
         <Image src={logo} alt="Logo" className="w-16 h-fit mx-auto my-5" />
         <section className="flex-grow flex flex-col overflow-y-auto max-h-[80dvh] chat-body">
           {noMessages ? (
             <div className="flex flex-col justify-center items-center flex-grow my-auto">
-              <p className="text-2xl w-[90%] text-neutral text-center mb-10">
+              <p className="lg:text-2xl text-lg w-[90%] text-neutral text-center mb-10">
                 Welcome Football Fans! Ask me anything about the fantastic topic
                 of Football and I will come back with the most up-to-date
                 answers. Hope you will enjoy!
@@ -81,13 +81,13 @@ export default function Home() {
           <input
             type="text"
             placeholder="Talk about football with me..."
-            className="input bg-transparent flex-grow focus:outline-none focus:border-0 input-lg"
+            className="input bg-transparent flex-grow focus:outline-none focus:border-0 lg:input-lg"
             onChange={handleInputChange}
             value={input}
           />
           <button
             type="submit"
-            className="btn btn-primary text-white h-full rounded-full btn-lg"
+            className="btn btn-primary text-white h-full rounded-full lg:btn-lg"
           >
             <i className="bi bi-send"></i>
           </button>
