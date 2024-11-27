@@ -19,3 +19,11 @@ bodY {
 .container {
   @apply mx-auto;
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 4px;
+}

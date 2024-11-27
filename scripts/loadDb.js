@@ -25,6 +25,7 @@ const fbData = [
   "https://www.flashscore.com/",
   "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals",
   "https://inside.fifa.com/fifa-world-ranking/men",
+  "https://en.wikipedia.org/wiki/Ballon_d%27Or",
 ];
 
 const client = new DataAPIClient(ASTRA_DB_APP_TOKEN);
@@ -67,7 +68,6 @@ const loadSampleData = async () => {
       });
 
       const vector = embedding.data[0].embedding;
-      console.log("from line 71", collection);
       const res = await collection.insertOne({
         $vector: vector,
         text: chunk,

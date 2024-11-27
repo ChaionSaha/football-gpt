@@ -12,7 +12,7 @@ const PromptSuggestionRow = ({ onPromptClick }) => {
       {suggestions.map((suggestion, index) => (
         <button
           key={index}
-          className="bg-base-100 rounded-full px-4 py-3"
+          className=" rounded-full px-4 py-3 border border-primary"
           onClick={() => onPromptClick(suggestion)}
         >
           {suggestion}
