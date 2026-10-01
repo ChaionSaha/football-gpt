@@ -1,8 +1,8 @@
 import { DataAPIClient } from "@datastax/astra-db-ts";
 import "dotenv/config";
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import puppeteer from "puppeteer";
 import { createEmbeddings, EMBEDDING_DIMENSION } from "../lib/embeddings.mjs";
+import { createTextSplitter } from "../lib/textSplitter.mjs";
 
 const {
     ASTRA_DB_NAMESPACE,
@@ -27,7 +27,7 @@ const fbData = [
 const client = new DataAPIClient(ASTRA_DB_APP_TOKEN);
 const db = client.db(ASTRA_DB_API_ENDPOINT, { namespace: ASTRA_DB_NAMESPACE });
 
-const splitter = new RecursiveCharacterTextSplitter({
+const splitter = createTextSplitter({
     chunkSize: 512,
     chunkOverlap: 100,
 });
